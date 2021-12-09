@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.example.clubapi.models.Member;
 
-import com.example.clubapi.Services.MemberService;
+import com.example.clubapi.services.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

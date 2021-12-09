@@ -1,6 +1,6 @@
 package com.example.clubapi.controllers;
 
-import com.example.clubapi.Services.SeatService;
+import com.example.clubapi.services.SeatService;
 import com.example.clubapi.models.Seat;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,7 @@ public class SeatController {
     @Autowired
     private SeatService service;
 
-    @GetMapping("/status")
+    @GetMapping("/status/{idSeat}")
     public Boolean isBusy(
             @PathVariable String idSeat) {
          return service.isBusy(idSeat);
@@ -31,22 +31,8 @@ public class SeatController {
 
 
     @PutMapping("/claim/{idSeat}")
-    public Boolean claimSeat(
-        @PathVariable String idSeat {
-            //return service.claimSeat(idSeat);
-        }
-    )
+    public Boolean claimSeat( @PathVariable String idSeat ) {
 
-    @PutMapping("/claim/{idSeat}")
-    public Boolean claimSeat(
-        @PathVariable String idSeat) {
-        // return service.claimSeat(idSeat)
-
-    @PutMapping("/updateSeat")
-    public Boolean updateSeatStatus(
-            @PathVariable String idSeat) {
-        // return service.updateSeatStatus(idSeat)
-
+        return service.claimSeat(idSeat)
     }
-
 }

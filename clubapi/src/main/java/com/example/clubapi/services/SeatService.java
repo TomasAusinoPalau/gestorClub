@@ -1,4 +1,4 @@
-package com.example.clubapi.Services;
+package com.example.clubapi.services;
 
 import com.example.clubapi.models.Seat;
 import org.springframework.beans.factory.annotation.Autowired;
